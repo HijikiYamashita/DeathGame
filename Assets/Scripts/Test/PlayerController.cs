@@ -14,11 +14,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             this.gameObject.transform.position -= new Vector3(moveSpeed * Time.deltaTime, 0, 0);
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             this.gameObject.transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
         }
@@ -29,7 +29,17 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.tag == "thorn")
         {
             Debug.Log("棘死");
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("ThornDeath");
+        }
+        if (col.gameObject.tag == "fire")
+        {
+            Debug.Log("焼死");
+            SceneManager.LoadScene("BurnedDeath");
+        }
+        if (col.gameObject.tag == "virus")
+        {
+            Debug.Log("病死");
+            SceneManager.LoadScene("DiseasesDeath");
         }
     }
 }
