@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e533578ec09c8f842966e1de7b47f36e
+guid: 0d2958b3df51af04c956780a5e92a288
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: KsoKagerou
+  fontName: FOT-ComicMystery Std
   fontNames:
-  - KsoKagerou
+  - GunyaGunya
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

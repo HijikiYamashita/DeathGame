@@ -10,6 +10,9 @@ TagManager:
   - Virus1
   - Virus2
   - water
+  - moveBlock
+  - noMoveBlock
+  - playerNone
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 34ab08dffd422e3458f0983e2eac794c
+guid: e533578ec09c8f842966e1de7b47f36e
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: FOT-TsukuAOldMin Pr6
+  fontName: KsoKagerou
   fontNames:
-  - FOT-TsukuAOldMin Pr6
+  - Syodou
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

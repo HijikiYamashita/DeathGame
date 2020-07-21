@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StageScroll : MonoBehaviour
 {
-    public static float speed = 5.0f;
+    public static float speed;
   
     void Start()
     {

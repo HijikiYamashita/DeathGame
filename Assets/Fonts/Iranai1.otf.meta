@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4524b582cd20cdb4895a803fad302731
+guid: 34ab08dffd422e3458f0983e2eac794c
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -10,9 +10,9 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontName: FOT-TsukuAOldMin Pr6
   fontNames:
-  - FOT-TsukuAOldMin Pr6
+  - Iranai1
   fallbackFontReferences:
-  - {fileID: 12800000, guid: 34ab08dffd422e3458f0983e2eac794c, type: 3}
+  - {fileID: 12800000, guid: 4524b582cd20cdb4895a803fad302731, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

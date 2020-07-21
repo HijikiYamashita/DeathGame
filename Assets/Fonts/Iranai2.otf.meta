@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0d2958b3df51af04c956780a5e92a288
+guid: 4524b582cd20cdb4895a803fad302731
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,10 +8,11 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: FOT-ComicMystery Std
+  fontName: FOT-TsukuAOldMin Pr6
   fontNames:
-  - FOT-ComicMystery Std
-  fallbackFontReferences: []
+  - Iranai2
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 34ab08dffd422e3458f0983e2eac794c, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

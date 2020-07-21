@@ -14,10 +14,14 @@ public class PlayerController : MonoBehaviour
     public Text timeCount;
 
     int countDown = 0;
+    int trapNum;
+
+    int euthanasia;
 
     void Start()
     {
         StageScroll.speed = 5.0f;
+        MoveBlockScript.speed = 5.0f;
         moveSpeed = 5.0f;
         countDown = 0;
         timeCount.enabled = false;
@@ -38,10 +42,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
             StageScroll.speed -= 0.5f;
+            MoveBlockScript.speed -= 0.5f;
         }
         if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
         {
             StageScroll.speed += 0.5f;
+            MoveBlockScript.speed += 0.5f;
         }
 
         if (countDown == 1)
@@ -77,6 +83,11 @@ public class PlayerController : MonoBehaviour
                 SceneManager.LoadScene("GameOver");
             }
         }
+        if (euthanasia >= 3)
+        {
+            death = 5;
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -85,11 +96,22 @@ public class PlayerController : MonoBehaviour
         {
             death = 1;
             SceneManager.LoadScene("GameOver");
+            trapNum = 1;
+            reset();
         }
         if (col.gameObject.tag == "fire")
         {
             death = 2;
             SceneManager.LoadScene("GameOver");
+            trapNum = 1;
+            reset();
+        }
+        if (col.gameObject.tag == "noMoveBlock")
+        {
+            death = 6;
+            SceneManager.LoadScene("GameOver");
+            trapNum = 1;
+            reset();
         }
     }
 
@@ -102,6 +124,8 @@ public class PlayerController : MonoBehaviour
             {
                 time = 5.0f;
                 countDown = 1;
+                trapNum = 1;
+                reset();
             }
         }
         if (col.gameObject.tag == "Virus2")
@@ -109,6 +133,8 @@ public class PlayerController : MonoBehaviour
             Destroy(col.gameObject);
             time = 3.0f;
             countDown = 2;
+            trapNum = 1;
+            reset();
         }
         if (col.gameObject.tag == "silverBullet")
         {
@@ -116,10 +142,13 @@ public class PlayerController : MonoBehaviour
             countDown = 0;
             timeCount.enabled = false;
             time = 5.0f;
+            trapNum = 2;
+            reset();
         }
         if (col.gameObject.tag == "water")
         {
             StageScroll.speed = 3.0f;
+            MoveBlockScript.speed = 3.0f;
             moveSpeed = 3.0f;
             time = 4.0f;
             countDown = 3;
@@ -130,10 +159,23 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.tag == "water")
         {
             StageScroll.speed = 5.0f;
+            MoveBlockScript.speed = 5.0f;
             moveSpeed = 5.0f;
             countDown = 0;
             timeCount.enabled = false;
             time = 5.0f;
+        }
+    }
+
+    void reset()
+    {
+        if (trapNum == 1)
+        {
+            euthanasia = 0;
+        }
+        else if (trapNum == 2)
+        {
+            euthanasia += 1;
         }
     }
 }
