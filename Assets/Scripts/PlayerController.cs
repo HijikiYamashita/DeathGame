@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     int countDown = 0;
     int trapNum;
+    int yakuzaishi;
 
     int euthanasia;
 
@@ -144,6 +145,14 @@ public class PlayerController : MonoBehaviour
             time = 5.0f;
             trapNum = 2;
             reset();
+            yakuzaishi = Random.Range(1, 100);
+            if (yakuzaishi <= 5)
+            {
+                death = 8;
+                SceneManager.LoadScene("GameOver");
+                trapNum = 1;
+                reset();
+            }
         }
         if (col.gameObject.tag == "water")
         {

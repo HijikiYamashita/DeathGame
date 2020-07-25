@@ -52,6 +52,11 @@ public class GameOver : MonoBehaviour
             kanji.text = "ぎっくりご死";
             hiragana.text = "ぎ  っ  く  り  ご  し";
         }
+        if (PlayerController.death == 8)
+        {
+            kanji.text = "薬剤死";
+            hiragana.text = "や  く  ざ  い  し";
+        }
     }
 
     public void retry()

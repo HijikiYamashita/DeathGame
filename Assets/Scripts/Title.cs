@@ -7,7 +7,7 @@ public class Title : MonoBehaviour
 {
     public AudioClip sound1;
     AudioSource audioSource;
-    float soundTime = 4.0f;
+    float soundTime = 1.0f;
 
     void Start()
     {

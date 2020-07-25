@@ -191,7 +191,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6B7B"
+  m_Text: "\u30D0\u30B0\u6B7B"
 --- !u!222 &12127202
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -779,7 +779,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u3057"
+  m_Text: "\u3070  \u3050  \u3057"
 --- !u!222 &1494187543
 CanvasRenderer:
   m_ObjectHideFlags: 0
