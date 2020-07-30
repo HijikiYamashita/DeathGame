@@ -27,6 +27,6 @@ public class Title : MonoBehaviour
 
     void sceanChange()
     {
-        SceneManager.LoadScene("TestStage");
+        SceneManager.LoadScene("Menu");
     }
 }

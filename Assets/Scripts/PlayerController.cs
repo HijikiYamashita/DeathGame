@@ -9,9 +9,12 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5.0f;
     public static int death = 0;
 
+    public static string sceneName;
+
     public float time = 5.0f;
 
-    public Text timeCount;
+    Text timeCount;
+    GameObject timeText;
 
     int countDown = 0;
     int trapNum;
@@ -19,14 +22,20 @@ public class PlayerController : MonoBehaviour
 
     int euthanasia;
 
+
     void Start()
     {
+        timeText = GameObject.Find("Message");
+        timeCount = timeText.GetComponent<Text>();
+
         StageScroll.speed = 5.0f;
         MoveBlockScript.speed = 5.0f;
         moveSpeed = 5.0f;
         countDown = 0;
         timeCount.enabled = false;
         time = 5.0f;
+
+        sceneName = SceneManager.GetActiveScene().name;
     }
 
     void Update()

@@ -61,6 +61,6 @@ public class GameOver : MonoBehaviour
 
     public void retry()
     {
-        SceneManager.LoadScene("TestStage");
+        SceneManager.LoadScene(PlayerController.sceneName);
     }
 }
