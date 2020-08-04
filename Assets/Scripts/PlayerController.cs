@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public static int death = 0;
 
     public static string sceneName;
+    public static int sceneNameInt;
 
     public float time = 5.0f;
 
@@ -170,6 +171,10 @@ public class PlayerController : MonoBehaviour
             moveSpeed = 3.0f;
             time = 4.0f;
             countDown = 3;
+        }
+        if (col.gameObject.tag == "goal")
+        {
+            SceneManager.LoadScene("Clear");
         }
     }
     void OnTriggerExit2D(Collider2D col)

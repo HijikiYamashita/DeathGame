@@ -13,6 +13,7 @@ TagManager:
   - moveBlock
   - noMoveBlock
   - playerNone
+  - goal
   layers:
   - Default
   - TransparentFX
