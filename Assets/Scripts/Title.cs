@@ -12,6 +12,9 @@ public class Title : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        PlayerController.sceneNameArray[0] = "01_TheHall_of_Thorn";
+        PlayerController.sceneNameArray[1] = "02_TheHall_of_Fire";
+        PlayerController.sceneNameArray[2] = "TestStage";
     }
 
     void Update()
@@ -22,7 +25,7 @@ public class Title : MonoBehaviour
     public void gameStart()
     {
         audioSource.PlayOneShot(sound1);
-        Invoke("sceanChange", 3.0f);
+        Invoke("sceanChange", 1.0f);
     }
 
     void sceanChange()

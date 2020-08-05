@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameOver : MonoBehaviour
 {
@@ -62,5 +63,14 @@ public class GameOver : MonoBehaviour
     public void retry()
     {
         SceneManager.LoadScene(PlayerController.sceneName);
+    }
+
+    public void quit()
+    {
+        PlayerController.nextStage = Array.IndexOf(PlayerController.sceneNameArray, PlayerController.sceneName);
+        PlayerPrefs.SetInt("stage", PlayerController.nextStage);
+        PlayerPrefs.Save();
+        UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
     }
 }

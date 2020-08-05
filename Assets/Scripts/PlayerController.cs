@@ -10,8 +10,9 @@ public class PlayerController : MonoBehaviour
     public static int death = 0;
 
     public static string sceneName;
-    public static int sceneNameInt;
-
+    public static int nextStage;
+    public static string[] sceneNameArray = new string[3];
+  
     public float time = 5.0f;
 
     Text timeCount;
