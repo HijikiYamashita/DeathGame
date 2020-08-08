@@ -14,7 +14,12 @@ public class Title : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         PlayerController.sceneNameArray[0] = "01_TheHall_of_Thorn";
         PlayerController.sceneNameArray[1] = "02_TheHall_of_Fire";
-        PlayerController.sceneNameArray[2] = "TestStage";
+        PlayerController.sceneNameArray[2] = "03_TheHall_of_Virus";
+        PlayerController.sceneNameArray[3] = "04_TheHall_of_Water";
+        PlayerController.sceneNameArray[4] = "05_TheHall_of_Block";
+        PlayerController.sceneNameArray[5] = "06_TheHall_of_VirusFire";
+        PlayerController.sceneNameArray[6] = "07_TheHall_of_SilverBullet";
+        PlayerController.sceneNameArray[7] = "08_TheHall_of_ThornBlock";
     }
 
     void Update()

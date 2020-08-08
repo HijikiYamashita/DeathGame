@@ -18,12 +18,27 @@ EditorBuildSettings:
     path: Assets/Scenes/GameOver.unity
     guid: 3131be5780eaa0f4298dc5b25dbccd8d
   - enabled: 1
-    path: Assets/Scenes/TestStage.unity
-    guid: 6a6cb51d58c8d5c41b5c304e6e561ce6
-  - enabled: 1
     path: Assets/Scenes/Stages/01_TheHall_of_Thorn.unity
     guid: 97b2b49581f10074fb49517af0af0f25
   - enabled: 1
     path: Assets/Scenes/Stages/02_TheHall_of_Fire.unity
     guid: 3037a3a9a9c19494198b09de795f9bb3
+  - enabled: 1
+    path: Assets/Scenes/Stages/03_TheHall_of_Virus.unity
+    guid: 8661fe6c126032e4fb26972e273df7b4
+  - enabled: 1
+    path: Assets/Scenes/Stages/04_TheHall_of_Water.unity
+    guid: 458085c8bda98d0409dd33589d89c556
+  - enabled: 1
+    path: Assets/Scenes/Stages/05_TheHall_of_Block.unity
+    guid: 064fee9914d81204ea6b5106e01e47d5
+  - enabled: 1
+    path: Assets/Scenes/Stages/06_TheHall_of_VirusFire.unity
+    guid: f8bd6937a6a451c4aa63097f32684f36
+  - enabled: 1
+    path: Assets/Scenes/Stages/07_TheHall_of_SilverBullet.unity
+    guid: e84d3eb9005b15d47a606e19aaf8a81b
+  - enabled: 1
+    path: Assets/Scenes/Stages/08_TheHall_of_ThornBlock.unity
+    guid: 7e0d78793575ced4bb4fae34615ddc0e
   m_configObjects: {}
