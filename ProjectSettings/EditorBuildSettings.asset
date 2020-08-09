@@ -41,4 +41,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stages/08_TheHall_of_ThornBlock.unity
     guid: 7e0d78793575ced4bb4fae34615ddc0e
+  - enabled: 1
+    path: Assets/Scenes/Stages/09_TheHall_of_WaterFireThorn.unity
+    guid: 9c92b2591bd36754c990d2916b428258
+  - enabled: 1
+    path: Assets/Scenes/Stages/10_TheHall_of_VirusBlock.unity
+    guid: a7bf945fa3b19224cb1cdf864599784d
+  - enabled: 1
+    path: Assets/Scenes/Stages/11_TheHall_of_SecondThorn.unity
+    guid: 7e891dae4ee53d2409d0202975ac7248
+  - enabled: 1
+    path: Assets/Scenes/Stages/12_TheHall_of_SecondFire.unity
+    guid: b5049136acd01004e8c0096097e6ad4f
   m_configObjects: {}

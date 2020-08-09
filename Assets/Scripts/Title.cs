@@ -20,6 +20,10 @@ public class Title : MonoBehaviour
         PlayerController.sceneNameArray[5] = "06_TheHall_of_VirusFire";
         PlayerController.sceneNameArray[6] = "07_TheHall_of_SilverBullet";
         PlayerController.sceneNameArray[7] = "08_TheHall_of_ThornBlock";
+        PlayerController.sceneNameArray[8] = "09_TheHall_of_WaterFireThorn";
+        PlayerController.sceneNameArray[9] = "10_TheHall_of_VirusBlock";
+        PlayerController.sceneNameArray[10] = "11_TheHall_of_SecondThorn";
+        PlayerController.sceneNameArray[11] = "12_TheHall_of_SecondFire";
     }
 
     void Update()

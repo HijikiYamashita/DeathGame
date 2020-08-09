@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     public static string sceneName;
     public static int nextStage;
-    public static string[] sceneNameArray = new string[8];
+    public static string[] sceneNameArray = new string[12];
   
     public float time = 5.0f;
 

@@ -17,6 +17,11 @@ public class GameOver : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.Return))
+        {
+            retry();
+        }
+
         if (PlayerController.death == 1)
         {
             kanji.text = "棘死";
