@@ -17,6 +17,26 @@ public class GameStart : MonoBehaviour
         
     }
 
+    public void normalMode()
+    {
+        SceneManager.LoadScene("NormalMode");
+    }
+
+    public void foreverMode()
+    {
+        SceneManager.LoadScene("ForeverMode");
+    }
+
+    public void foreverHistry()
+    {
+        SceneManager.LoadScene("ForeverHistry");
+    }
+
+    public void foreverStart()
+    {
+        SceneManager.LoadScene("ForeverStage");
+    }
+
     public void newGameStart()
     {
         SceneManager.LoadScene("01_TheHall_of_Thorn");
