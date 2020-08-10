@@ -21,11 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/NormalMode/Clear.unity
     guid: ae36297d36841ac47a901c6145089d5b
   - enabled: 1
-    path: Assets/Scenes/NormalMode/GameOver.unity
+    path: Assets/Scenes/GameOver.unity
     guid: 3131be5780eaa0f4298dc5b25dbccd8d
-  - enabled: 1
-    path: Assets/Scenes/ForeverMode/ForeverGameOver.unity
-    guid: 5f7f8def887213142b1e48056ff1ee7c
   - enabled: 1
     path: Assets/Scenes/ForeverMode/ForeverHistry.unity
     guid: d6c02a9b9e8bd4d4881cc433e4880e1b

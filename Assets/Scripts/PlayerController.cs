@@ -4,16 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ForeverPlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5.0f;
     public static int death = 0;
+
+    public static string sceneName;
+    public static int nextStage;
+    public static string[] sceneNameArray = new string[12];
   
     public float time = 5.0f;
-
-    public static float foreverTime = 0.0f;
-    GameObject fTimeTextObj;
-    Text fTimeText;
 
     Text timeCount;
     GameObject timeText;
@@ -23,6 +23,10 @@ public class ForeverPlayerController : MonoBehaviour
     int yakuzaishi;
 
     int euthanasia;
+
+    public static float foreverTime;
+    GameObject fTimeTextObj;
+    Text fTimeText;
 
 
     void Start()
@@ -40,6 +44,7 @@ public class ForeverPlayerController : MonoBehaviour
         timeCount.enabled = false;
         time = 5.0f;
 
+        sceneName = SceneManager.GetActiveScene().name;
     }
 
     void Update()
@@ -76,7 +81,7 @@ public class ForeverPlayerController : MonoBehaviour
             if (time < 0f)
             {
                 death = 3;
-                SceneManager.LoadScene("ForeverGameOver");
+                SceneManager.LoadScene("GameOver");
             }
         }
         if (countDown == 2)
@@ -87,7 +92,7 @@ public class ForeverPlayerController : MonoBehaviour
             if (time < 0f)
             {
                 death = 3;
-                SceneManager.LoadScene("ForeverGameOver");
+                SceneManager.LoadScene("GameOver");
             }
         }
         if (countDown == 3)
@@ -98,13 +103,13 @@ public class ForeverPlayerController : MonoBehaviour
             if (time < 0f)
             {
                 death = 4;
-                SceneManager.LoadScene("ForeverGameOver");
+                SceneManager.LoadScene("GameOver");
             }
         }
         if (euthanasia >= 3)
         {
             death = 5;
-            SceneManager.LoadScene("ForeverGameOver");
+            SceneManager.LoadScene("GameOver");
         }
     }
 
@@ -113,28 +118,28 @@ public class ForeverPlayerController : MonoBehaviour
         if (col.gameObject.tag == "thorn")
         {
             death = 1;
-            SceneManager.LoadScene("ForeverGameOver");
+            SceneManager.LoadScene("GameOver");
             trapNum = 1;
             reset();
         }
         if (col.gameObject.tag == "fire")
         {
             death = 2;
-            SceneManager.LoadScene("ForeverGameOver");
+            SceneManager.LoadScene("GameOver");
             trapNum = 1;
             reset();
         }
         if (col.gameObject.tag == "noMoveBlock")
         {
             death = 6;
-            SceneManager.LoadScene("ForeverGameOver");
+            SceneManager.LoadScene("GameOver");
             trapNum = 1;
             reset();
         }
         if (col.gameObject.tag == "wall")
         {
             death = 9;
-            SceneManager.LoadScene("ForeverGameOver");
+            SceneManager.LoadScene("GameOver");
             trapNum = 1;
             reset();
         }
@@ -173,7 +178,7 @@ public class ForeverPlayerController : MonoBehaviour
             if (yakuzaishi <= 5)
             {
                 death = 8;
-                SceneManager.LoadScene("ForeverGameOver");
+                SceneManager.LoadScene("GameOver");
                 trapNum = 1;
                 reset();
             }

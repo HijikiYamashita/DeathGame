@@ -72,15 +72,46 @@ public class GameOver : MonoBehaviour
 
     public void retry()
     {
-        SceneManager.LoadScene(PlayerController.sceneName);
+        if (PlayerController.sceneName == "ForeverStage")
+        {
+            if (PlayerPrefs.GetFloat("foreverTimeHistry") <= PlayerController.foreverTime)
+            {
+                PlayerPrefs.SetFloat("foreverTimeHistry", PlayerController.foreverTime);
+            }
+            else if (PlayerPrefs.GetFloat("foreverTimeHistry") == null)
+            {
+                PlayerPrefs.SetFloat("foreverTimeHistry", PlayerController.foreverTime);
+            }
+            SceneManager.LoadScene("ForeverStage");
+        }
+        else
+        {
+            SceneManager.LoadScene(PlayerController.sceneName);
+        }
     }
 
     public void quit()
     {
-        PlayerController.nextStage = Array.IndexOf(PlayerController.sceneNameArray, PlayerController.sceneName);
-        PlayerPrefs.SetInt("stage", PlayerController.nextStage);
-        PlayerPrefs.Save();
-        UnityEditor.EditorApplication.isPlaying = false;
-        Application.Quit();
+        if (PlayerController.sceneName == "ForeverStage")
+        {
+            if (PlayerPrefs.GetFloat("foreverTimeHistry") <= PlayerController.foreverTime)
+            {
+                PlayerPrefs.SetFloat("foreverTimeHistry", PlayerController.foreverTime);
+            }
+            else if (PlayerPrefs.GetFloat("foreverTimeHistry") == null)
+            {
+                PlayerPrefs.SetFloat("foreverTimeHistry", PlayerController.foreverTime);
+            }
+            UnityEditor.EditorApplication.isPlaying = false;
+            Application.Quit();
+        }
+        else
+        {
+            PlayerController.nextStage = Array.IndexOf(PlayerController.sceneNameArray, PlayerController.sceneName);
+            PlayerPrefs.SetInt("stage", PlayerController.nextStage);
+            PlayerPrefs.Save();
+            UnityEditor.EditorApplication.isPlaying = false;
+            Application.Quit();
+        }
     }
 }
