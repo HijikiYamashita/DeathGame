@@ -57,6 +57,11 @@ public class FoeverGameOver : MonoBehaviour
             kanji.text = "薬剤死";
             hiragana.text = "や  く  ざ  い  し";
         }
+        if (ForeverPlayerController.death == 9)
+        {
+            kanji.text = "ルール的死";
+            hiragana.text = "る  ー  る  て  き  し";
+        }
     }
 
     public void retry()

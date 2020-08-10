@@ -125,6 +125,13 @@ public class PlayerController : MonoBehaviour
             trapNum = 1;
             reset();
         }
+        if (col.gameObject.tag == "wall")
+        {
+            death = 9;
+            SceneManager.LoadScene("GameOver");
+            trapNum = 1;
+            reset();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)

@@ -131,6 +131,13 @@ public class ForeverPlayerController : MonoBehaviour
             trapNum = 1;
             reset();
         }
+        if (col.gameObject.tag == "wall")
+        {
+            death = 9;
+            SceneManager.LoadScene("ForeverGameOver");
+            trapNum = 1;
+            reset();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
