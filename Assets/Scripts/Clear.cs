@@ -19,6 +19,8 @@ public class Clear : MonoBehaviour
     public void nextStage()
     {
         PlayerController.nextStage = Array.IndexOf(PlayerController.sceneNameArray, PlayerController.sceneName) + 1;
+        PlayerPrefs.SetInt("stage", PlayerController.nextStage);
+        PlayerPrefs.Save();
         SceneManager.LoadScene(PlayerController.sceneNameArray[PlayerController.nextStage]);
     }
 

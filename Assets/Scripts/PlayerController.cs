@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
         fTimeTextObj = GameObject.Find("Time");
         fTimeText = fTimeTextObj.GetComponent<Text>();
+        foreverTime = 0.0f;
 
         StageScroll.speed = 5.0f;
         MoveBlockScript.speed = 5.0f;
@@ -175,7 +176,7 @@ public class PlayerController : MonoBehaviour
             trapNum = 2;
             reset();
             yakuzaishi = Random.Range(1, 100);
-            if (yakuzaishi <= 5)
+            if (yakuzaishi <= 3)
             {
                 death = 8;
                 SceneManager.LoadScene("GameOver");
