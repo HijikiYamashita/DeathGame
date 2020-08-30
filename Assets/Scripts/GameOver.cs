@@ -7,12 +7,13 @@ using System;
 
 public class GameOver : MonoBehaviour
 {
+    GameObject SE;
     public Text kanji;
     public Text hiragana;
 
     void Start()
     {
-        
+        SE = GameObject.Find("SE");
     }
 
     void Update()
@@ -72,6 +73,7 @@ public class GameOver : MonoBehaviour
 
     public void retry()
     {
+        SE.GetComponent<SE>().se();
         if (PlayerController.sceneName == "ForeverStage")
         {
             if (PlayerPrefs.GetFloat("foreverTimeHistry") <= PlayerController.foreverTime)
@@ -102,6 +104,7 @@ public class GameOver : MonoBehaviour
             {
                 PlayerPrefs.SetFloat("foreverTimeHistry", PlayerController.foreverTime);
             }
+            SE.GetComponent<SE>().se();
             //UnityEditor.EditorApplication.isPlaying = false;
             Application.Quit();
         }
@@ -113,5 +116,7 @@ public class GameOver : MonoBehaviour
             //UnityEditor.EditorApplication.isPlaying = false;
             Application.Quit();
         }
+        SE.GetComponent<SE>().se();
+        SceneManager.LoadScene("Title");
     }
 }

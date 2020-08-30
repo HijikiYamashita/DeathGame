@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Setup.unity
+    guid: 1e1c18b4377cb444eb95f5e89a18426c
+  - enabled: 1
     path: Assets/Scenes/Title.unity
     guid: b3d971e1a0c35f24f8d6f207b75c2bdb
   - enabled: 1
@@ -32,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ForeverMode/ForeverStage.unity
     guid: 6faf05bbaacecf6459f59f54d15b5aee
+  - enabled: 1
+    path: Assets/Scenes/NormalMode/Coming Soon.unity
+    guid: 4da124a1bc673524f9ebf0e431c1f632
   - enabled: 1
     path: Assets/Scenes/NormalMode/Stages/01_TheHall_of_Thorn.unity
     guid: 97b2b49581f10074fb49517af0af0f25

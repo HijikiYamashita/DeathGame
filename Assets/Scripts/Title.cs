@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Title : MonoBehaviour
 {
-    public AudioClip sound1;
-    AudioSource audioSource;
     float soundTime = 1.0f;
+    GameObject SE;
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        SE = GameObject.Find("SE");
         PlayerController.sceneNameArray[0] = "01_TheHall_of_Thorn";
         PlayerController.sceneNameArray[1] = "02_TheHall_of_Fire";
         PlayerController.sceneNameArray[2] = "03_TheHall_of_Virus";
@@ -24,6 +23,7 @@ public class Title : MonoBehaviour
         PlayerController.sceneNameArray[9] = "10_TheHall_of_VirusBlock";
         PlayerController.sceneNameArray[10] = "11_TheHall_of_SecondThorn";
         PlayerController.sceneNameArray[11] = "12_TheHall_of_SecondFire";
+        PlayerController.sceneNameArray[12] = "Coming Soon";
     }
 
     void Update()
@@ -33,12 +33,7 @@ public class Title : MonoBehaviour
 
     public void gameStart()
     {
-        audioSource.PlayOneShot(sound1);
-        Invoke("sceanChange", 1.0f);
-    }
-
-    void sceanChange()
-    {
+        SE.GetComponent<SE>().se();
         SceneManager.LoadScene("Menu");
     }
 }

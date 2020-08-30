@@ -6,9 +6,11 @@ using System;
 
 public class BackToTitle : MonoBehaviour
 {
+    GameObject SE;
+
     void Start()
     {
-        
+        SE = GameObject.Find("SE");
     }
 
     void Update()
@@ -44,6 +46,7 @@ public class BackToTitle : MonoBehaviour
         else
         {
         }
+        SE.GetComponent<SE>().se();
         SceneManager.LoadScene("Title");
     }
 }
