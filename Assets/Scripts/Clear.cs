@@ -29,7 +29,7 @@ public class Clear : MonoBehaviour
         PlayerController.nextStage = Array.IndexOf(PlayerController.sceneNameArray, PlayerController.sceneName) + 1;
         PlayerPrefs.SetInt("stage", PlayerController.nextStage);
         PlayerPrefs.Save();
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 }

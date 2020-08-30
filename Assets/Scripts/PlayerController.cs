@@ -162,10 +162,13 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.tag == "Virus2")
         {
             Destroy(col.gameObject);
-            time = 3.0f;
-            countDown = 2;
-            trapNum = 1;
-            reset();
+            if (countDown == 0)
+            {
+                time = 3.0f;
+                countDown = 2;
+                trapNum = 1;
+                reset();
+            }
         }
         if (col.gameObject.tag == "silverBullet")
         {

@@ -102,7 +102,7 @@ public class GameOver : MonoBehaviour
             {
                 PlayerPrefs.SetFloat("foreverTimeHistry", PlayerController.foreverTime);
             }
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
             Application.Quit();
         }
         else
@@ -110,7 +110,7 @@ public class GameOver : MonoBehaviour
             PlayerController.nextStage = Array.IndexOf(PlayerController.sceneNameArray, PlayerController.sceneName);
             PlayerPrefs.SetInt("stage", PlayerController.nextStage);
             PlayerPrefs.Save();
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
             Application.Quit();
         }
     }

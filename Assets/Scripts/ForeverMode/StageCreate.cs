@@ -34,7 +34,7 @@ public class StageCreate : MonoBehaviour
 
     void stageRandomCreate()
     {
-        stagePrefab = Random.Range(0, random);
+        stagePrefab = Random.Range(1, random);
         Instantiate(stageSets[stagePrefab], new Vector3(0.0f, -10.0f, 0.0f), Quaternion.identity);
     }
 
