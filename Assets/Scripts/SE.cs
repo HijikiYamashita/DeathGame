@@ -10,6 +10,7 @@ public class SE : MonoBehaviour
 
     void Start()
     {
+        Screen.SetResolution(1280, 720, true, 60);
         audioSource = GetComponent<AudioSource>();
         DontDestroyOnLoad(this);
         SceneManager.LoadScene("Title");

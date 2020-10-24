@@ -10,6 +10,7 @@ public class GameOver : MonoBehaviour
     GameObject SE;
     public Text kanji;
     public Text hiragana;
+    public Text time;
 
     void Start()
     {
@@ -68,6 +69,11 @@ public class GameOver : MonoBehaviour
         {
             kanji.text = "ルール的死";
             hiragana.text = "る  ー  る  て  き  し";
+        }
+
+        if (PlayerController.sceneName == "ForeverStage")
+        {
+            time.text = "記録 : " + PlayerController.foreverTime.ToString("N1") + "秒";
         }
     }
 
